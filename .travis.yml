@@ -7,7 +7,7 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_script:
 - bundle exec rake db:create:all
-- bundle exec rake db:migrate
+- rake db:migrate
 deploy:
   provider: heroku
   app:
