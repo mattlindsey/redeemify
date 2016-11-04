@@ -1,10 +1,13 @@
 language: ruby
+addons:
+  apt:
+    packages:
+    - gpg
 rvm:
 - 2.3.1
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
-- apt-get gpg
 before_script:
 - gpg --passphrase "$KEY" --output config/application.yml --decrypt config/application.yml.asc
 - bundle exec rake db:create:all
