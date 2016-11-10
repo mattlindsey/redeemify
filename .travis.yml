@@ -6,6 +6,7 @@ rvm:
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
+- env | grep rvm
 - gem uninstall -i $rvm_global_gems_path did_you_mean
 before_script:
 - gem install bundler
