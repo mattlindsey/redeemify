@@ -8,6 +8,7 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_script:
 - gpg --passphrase "$KEY" --output config/application.yml --decrypt config/application.yml.asc
+- gem install rake
 - bundle exec rake db:create:all
 - bundle exec rake db:migrate
 deploy:

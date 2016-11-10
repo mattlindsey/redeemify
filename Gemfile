@@ -42,7 +42,7 @@ group :development do
 end
 
 group :assets do
-  gem 'coffee-rails', '~> 4.0.0'
+  gem 'coffee-rails'
   gem 'jquery-ui-rails'
   gem 'sass-rails'
   gem 'twitter-bootstrap-rails'
