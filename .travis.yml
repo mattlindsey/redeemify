@@ -6,7 +6,7 @@ rvm:
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
-- gem uninstall -i /home/travis/build/mattlindsey/redeemify/vendor/bundle/ruby/2.3.0/gems did_you_mean
+- gem uninstall -i /home/travis/.rvm/gems/ruby-2.3.1@global did_you_mean 
 before_script:
 - gem install bundler
 - gem install rake
